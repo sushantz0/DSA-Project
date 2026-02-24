@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Disaster Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Disaster Management System</h1>
+    <p>DSA-based C++ backend with HTML/CSS/JS frontend</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Add Disaster Report</h2>
+      <form id="disasterForm">
+        <label>Type
+          <input type="text" name="type" required />
+        </label>
+        <label>Location
+          <input type="text" name="location" required />
+        </label>
+        <label>Severity (1–10)
+          <input type="number" name="severity" min="1" max="10" required />
+        </label>
+        <button type="submit">Submit Disaster</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Add Victim</h2>
+      <form id="victimForm">
+        <label>Name
+          <input type="text" name="name" required />
+        </label>
+        <label>Age
+          <input type="number" name="age" min="0" required />
+        </label>
+        <label>Location
+          <input type="text" name="location" required />
+        </label>
+        <label>Status
+          <input type="text" name="status" value="injured" />
+        </label>
+        <button type="submit">Add Victim</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Add Resource</h2>
+      <form id="resourceForm">
+        <label>Type
+          <select name="type">
+            <option value="ambulance">Ambulance</option>
+            <option value="first_aid">First Aid Box</option>
+            <option value="food">Food</option>
+            <option value="water">Water</option>
+            <option value="clothes">Clothes</option>
+            <option value="medical">Medical Kit</option>
+          </select>
+        </label>
+        <button type="submit">Add Resource</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Queries & Reports</h2>
+      <div class="buttons">
+        <button id="btnPriority">Show Disaster Priority List</button>
+        <button id="btnResources">Show Resources</button>
+        <button id="btnVictims">Show Victims</button>
+        <button id="btnAllocate">Greedy Resource Allocation</button>
+      </div>
+      <div class="buttons">
+        <button id="btnShortestPath">Shortest Rescue Path (BaseCamp → Hospital)</button>
+        <button id="btnBfs">BFS Traversal Demo</button>
+        <button id="btnDfs">DFS Traversal Demo</button>
+      </div>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Backend: C++ (DSA). Frontend: HTML/CSS/JS. JSON over CGI.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
